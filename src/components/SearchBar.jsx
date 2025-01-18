@@ -1,5 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
-
+import React, { useContext, useEffect, useRef, useState } from "react";
 function SearchBar() {
   const [value, setvalue] = useState("");
   const inputRef = useRef(null);
@@ -17,9 +16,8 @@ function SearchBar() {
             console.log("Enter");
         }
     })
-    return () => {
-    };
   }, []);
+  
   return (
     <div className="bg-dark-color p-3 rounded-lg flex justify-between">
       <input
