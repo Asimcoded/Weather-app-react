@@ -6,7 +6,7 @@ import SettingIcon from "../assets/icons/setting-icon.svg";
 function SideBar() {
   const inactiveStateStyle = "opacity-50"
   return (
-    <div className="h-full min-h-[400px] bg-dark-color rounded-lg p-4 flex flex-col justify-center gap-10">
+    <div className="h-full min-h-[400px] bg-dark-color rounded-lg p-4 row-span-2 flex flex-col justify-center gap-10">
       <NavLink to="/" className={({isActive})=>(!isActive ? inactiveStateStyle : "")+ " transition-all duration-200"}>
         <div className="flex flex-col gap-1 items-center">
           <img src={HomeIcon} alt="Home" className="h-[40px]" />
@@ -15,8 +15,8 @@ function SideBar() {
       </NavLink>
       <NavLink to="/search" className={({isActive})=>(!isActive ? inactiveStateStyle : "")+ " transition-all duration-200"}>
         <div className="flex flex-col gap-1 items-center">
-          <img src={SearchIcon} alt="Search" className="h-[35px]" />
-          <p className="text-xs font-thin">Search</p>
+          <img src={SearchIcon} alt="City" className="h-[35px]" />
+          <p className="text-xs font-thin">Cities</p>
         </div>
       </NavLink>
       <NavLink to="/setting" className={({isActive})=>(!isActive ? inactiveStateStyle : "")+ " transition-all duration-200"}>
