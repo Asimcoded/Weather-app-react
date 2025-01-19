@@ -1,7 +1,7 @@
 import React from 'react'
 
 function CityDisplay({temp, url, city, country, isSelect, onClick}) {
-    let style = `flex justify-between items-center p-[20px] rounded-lg ${!isSelect && 'bg-dark-color'}`
+    let style = `flex justify-between items-center p-[20px] rounded-lg  transition-all duration-200 ${!isSelect && 'bg-dark-color'}`
   return (
     <div className={style} onClick={onClick}>
         <div>
