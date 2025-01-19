@@ -22,7 +22,7 @@ function SearchBar() {
     <div className="bg-dark-color p-3 rounded-lg flex justify-between">
       <input
         type="text"
-        placeholder="Search for cites"
+        placeholder="Search for cities"
         className="bg-transparent w-full outline-none"
         value={value}
         onChange={handlerChange}

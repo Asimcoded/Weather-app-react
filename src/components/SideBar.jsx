@@ -13,7 +13,7 @@ function SideBar() {
           <p className="text-xs font-thin">Weather</p>
         </div>
       </NavLink>
-      <NavLink to="/search" className={({isActive})=>(!isActive ? inactiveStateStyle : "")+ " transition-all duration-200"}>
+      <NavLink to="/cities" className={({isActive})=>(!isActive ? inactiveStateStyle : "")+ " transition-all duration-200"}>
         <div className="flex flex-col gap-1 items-center">
           <img src={SearchIcon} alt="City" className="h-[35px]" />
           <p className="text-xs font-thin">Cities</p>

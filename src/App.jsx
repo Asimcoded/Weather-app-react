@@ -2,12 +2,12 @@ import './index.css'
 import SideBar from './components/SideBar'
 import { Route, Routes } from 'react-router-dom'
 import Home from './components/pages/Home'
-import Search from './components/pages/Search'
 import Setting from './components/pages/Setting'
 import { useEffect } from 'react'
 import fetchData from './fetchData'
 import SearchBar from './components/SearchBar'
 import sample from "./sample.json"
+import Cities from './components/pages/Cities'
 function App() {
   // useEffect(() => {
   //   fetchData("Mumbai").then(data=>{
@@ -22,7 +22,7 @@ function App() {
       <SearchBar />
       <Routes>
         <Route path="/" element={<Home data={sample}/>} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/cities" element={<Cities data={sample}/>} />
         <Route path="/setting" element={<Setting />} />
       </Routes>
     </div>
