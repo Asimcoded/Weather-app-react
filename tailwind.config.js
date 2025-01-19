@@ -8,6 +8,7 @@ export default {
         "dark-color": "#242038",
         "primary-color": "#CB9EFF",
         "secondary-color": "#EAE9FF",
+        "grey" : "#B9B9B9"
       },
     },
   },

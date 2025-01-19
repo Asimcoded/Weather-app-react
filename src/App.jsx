@@ -14,7 +14,7 @@ function App() {
   //     console.log(data);
   //   })
   // }, [])
-  console.log(sample);
+  // console.log(sample);
   
   return (
     <div className='h-screen p-[30px] grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-[20px]'>
