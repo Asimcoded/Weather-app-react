@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import VerticalTempPlace from "../VerticalTempPlace";
 import HorizontalTempPlace from "../HorizontalTempPlace";
 import WeatherDetail from "../WeatherDetail";
 import Clock from "../Clock";
+import { Data } from "../../contexts/DataContext";
 function Home({data}) {
+  const {data1} = useContext(Data)
+  console.log(data1);
+  
   return (
     <div className="grid md:grid-cols-[auto_auto_auto] md:grid-rows-[auto_auto_auto_auto_auto_auto] grid-cols-1 gap-[20px] sm:pb-0 pb-28">
       <div className="flex items-center md:row-span-2 md:col-span-2 justify-between p-[20px]">
