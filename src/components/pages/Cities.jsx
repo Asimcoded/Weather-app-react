@@ -9,8 +9,8 @@ function Cities({ data }) {
     setSelectedCom(componentName);
   };
   return (
-    <div className="grid grid-cols-3 gap-[20px]">
-      <div className=" col-span-2 rounded-lg grid grid-rows-4 gap-[20px]">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[20px] sm:pb-0 pb-28">
+      <div className=" lg:col-span-2 rounded-lg grid grid-rows-4 gap-[20px]">
         <CityDisplay
           city={data.city.name}
           country={data.city.country}

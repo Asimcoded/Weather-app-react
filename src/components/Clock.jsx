@@ -14,7 +14,7 @@ function Clock() {
   }, []);
 
   return (
-    <div>
+    <div className=' md:text-left text-center'>
       <h1 className='text-primary-color font-semibold text-lg'>{time.getHours()}:{time.getMinutes()}</h1>
       <p>{time.toDateString()}</p>
     </div>

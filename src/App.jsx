@@ -17,7 +17,7 @@ function App() {
   // console.log(sample);
   
   return (
-    <div className='h-screen p-[30px] grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] gap-[20px]'>
+    <div className='h-screen sm:p-[30px] p-[10px] grid sm:grid-cols-[auto_1fr] sm:grid-rows-[auto_1fr] grid-cols-[auto] gap-[20px]'>
       <SideBar />
       <SearchBar />
       <Routes>
