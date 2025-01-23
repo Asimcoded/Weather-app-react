@@ -1,4 +1,4 @@
-// import { apiKey } from "./Private/ApiKey";
+import { apiKey } from "./Private/ApiKey";
 const apiUrl = "https://api.openweathermap.org/data/2.5/forecast?";
 
 export default async function fetchData(city) {

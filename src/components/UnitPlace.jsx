@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 
-function UnitPlace({ title, label }) {
+function UnitPlace({ title, label, changeFunction }) {
   const activeState =
     "w-full bg-secondary-color text-dark-color p-2 rounded-md transition-all duration-200";
   const inactiveState = "w-full p-2 rounded-md transition-all duration-200";
   const [selectedComponent, setSelectedComponent] = useState(null);
   const handleClick = (componentName) => {
     setSelectedComponent(componentName);
+    changeFunction(componentName)
   };
 
   return (

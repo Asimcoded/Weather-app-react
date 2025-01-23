@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TogglePlace({ title, desc }) { 
+function TogglePlace({ title, desc, changeFunction }) {
   const [isOn, setIsOn] = useState(false);
 
   const toggle = () => {
@@ -15,7 +15,10 @@ function TogglePlace({ title, desc }) {
       </div>
       <div className="flex items-center justify-center ">
         <button
-          onClick={toggle}
+          onClick={() => {
+            toggle()
+            changeFunction()
+          }}
           className={`relative w-14 h-6 rounded-full transition-colors duration-300 ${
             isOn ? "bg-primary-color" : "bg-bg-color"
           }`}
