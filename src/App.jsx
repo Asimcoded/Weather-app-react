@@ -23,7 +23,8 @@ function App() {
   // console.log(isFocused);
   return (
     <div className="h-screen sm:p-[30px] p-[10px] grid sm:grid-cols-[auto_1fr] sm:grid-rows-[auto_1fr] grid-cols-[auto] gap-[20px]">
-      {/* <div className="absolute w-full h-svh top-0 left-0 bg-bg-color z-20"></div> */}
+      {isFocused && <div className="absolute w-full h-svh top-0 left-0 bg-bg-color opacity-90 z-20 transition-all duration-1000"></div>}
+      
       <SideBar />
       <SearchBar getFocus={getFocus} />
       <Routes>
