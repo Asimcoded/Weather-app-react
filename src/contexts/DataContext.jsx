@@ -1,10 +1,10 @@
 import React, { createContext, useState } from "react";
-export const Data = createContext();
-export function DataContext({ children }) {
-  const [data1, setData1] = useState("hello");
+export const DataContext= createContext();
+export function DataProvider({ children }) {
+  const [data, setData] = useState({});
   const updateData = (data) => {
-    setData1(data)
+    setData(data)
   };
-  return <Data.Provider value={{data1,updateData}}>{children}</Data.Provider>;
+  return <DataContext.Provider value={{data,updateData}}>{children}</DataContext.Provider>;
 }
 

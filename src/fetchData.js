@@ -1,4 +1,5 @@
-import { apiKey } from "./Private/ApiKey";
+
+const apiKey = import.meta.env.VITE_API_KEY
 const apiUrl = "https://api.openweathermap.org/data/2.5/forecast?";
 
 export default async function fetchData(city) {
@@ -6,7 +7,6 @@ export default async function fetchData(city) {
     const response = await fetch(
       apiUrl + "q=" + city + "&appid=" + apiKey + "&units=metric"
     );
-    console.log(apiUrl + "q=" + city + "&appid=" + apiKey + "&units=metric");
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);

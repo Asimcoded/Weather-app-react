@@ -1,30 +1,28 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
+import fetchData from "../fetchData";
+import { DataContext } from "../contexts/DataContext";
 function SearchBar({ getFocus }) {
   const [value, setvalue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
   const focusedState = "drop-shadow-[0_0px_5px_#CB9EFF]";
   const inputRef = useRef(null);
-  const handlerChange = (e) => {
-    setvalue(e.target.value);
-  };
+  const {updateData} = useContext(DataContext)
+
   const SearchHandler = () => {
+    fetchData(value).then(data=>updateData(data))
     setvalue((e) => {
       return "";
     });
   };
-  useEffect(() => {
-    const input = inputRef.current;
-    input.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        input.blur();
-        setvalue((e) => {
-          return "";
-        });
-      }
-    });
-  }, []);
-
+  
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      fetchData(value).then(data=>updateData(data))
+      e.preventDefault();
+      e.target.blur();
+      setvalue("");
+    }
+  };
   return (
     <div
       className={`bg-dark-color p-3 rounded-lg flex justify-between z-30 ${
@@ -36,7 +34,8 @@ function SearchBar({ getFocus }) {
         placeholder="Search for cities"
         className="bg-transparent w-full outline-none"
         value={value}
-        onChange={handlerChange}
+        onChange={(e) => setvalue(e.target.value)}
+        onKeyPress={handleKeyPress}
         ref={inputRef}
         onFocus={() => {
           getFocus(true);
